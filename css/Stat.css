@@ -1,0 +1,138 @@
+body{
+    padding: 0;
+    margin: 0;
+}
+.navbar{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10px;
+    border-bottom: solid #999 1px;
+}
+.icon{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.logo{
+    height: 60px;
+}
+ul{
+   display: flex;
+   justify-content: space-between; 
+}
+ul li{
+    list-style: none;
+    padding: 10px;
+    
+}
+ul li a{
+    text-decoration: none;
+    color: #000;
+    transition: 0.2s ease-in-out;
+}
+ul li a:hover{
+    color: #f26440;
+    text-decoration: underline;
+}
+.button-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.button {
+    color: #000;
+    font-size: 16px;
+    font-weight: 400;
+    text-decoration: none;
+    transition: background-color 0.2s ease-in-out;
+}
+.button:hover{
+    color: #1da1f2;
+}
+.button i {
+    background: transparent;
+}
+.button-container button{
+    width: 150px;
+    height: 30px;
+    background-color: #fff;
+    border: solid 1px #f26420;
+    border-radius: 15px;
+    cursor: pointer;
+}
+.button-container button:hover{
+    background-color: #f26420;
+}
+.button-container a{
+    color: #000;
+    background: transparent;
+    text-decoration: none;
+}
+/***********************************************************************/
+.img_txt{
+    padding: 0;
+    position: relative;
+    height: 300px;
+    width: 100%;  
+    margin-bottom: 220px;
+}
+.img_txt img{
+    vertical-align: middle;
+    height: 500px;
+    width: 100%;
+}
+.img_txt .text {
+    top: 50%;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    font-size: 3rem;
+    font-weight: bold;
+    color: #f26440;
+    background: transparent;
+    text-align: center;
+    transform: translateY(100%);
+    animation: slide-up 0.8s ease-in-out forwards;
+    position: absolute;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+  
+@keyframes slide-up {
+    0% {
+        transform: translateY(80%);
+    }
+    100% {
+        transform: translateY(0);
+}
+}
+
+/********************************************************************/
+.stat{
+    display: grid;
+    justify-content: space-evenly;
+    align-items: center;
+}
+table{
+    border-collapse: collapse;
+    width: auto;
+    border-radius: 8px; /* Adjust the value as needed */
+    overflow: hidden; /* This ensures the border-radius is applied */
+}
+th{
+    border: 1px solid #999;
+    padding: 8px;
+    text-align: center;
+}
+h3{
+    text-align: center;
+}
+.tab1{
+    display: grid;
+    justify-content: center;
+    align-items: center;
+}
+.tab1 table{
+    width: auto;
+}

@@ -1,0 +1,156 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+.navbar{
+    position: relative;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+    width: 100%;
+    height: 75px;
+    border-bottom: solid #999 1px;
+
+}
+.icon{
+    width: 200px;
+    float: left;
+    height: 70px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    margin-left: 30px;
+}
+.icon p{
+    margin-left: 10px;
+    font-size: 20px;
+}
+  
+.logo{
+    height: 69px;
+    width: auto;
+    padding: 2px 0;
+    display: flex;
+}
+  
+.menu{
+    width: 400px;
+    float: left;
+    height: 70px;
+    justify-content: space-between;
+}
+ul{
+    float: left;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 170px;
+}
+ul li{
+    list-style: none;
+    margin-left: 50px;
+    margin-top: 27px;
+    font-size: 14px;
+}
+ul li a{
+    text-decoration: none;
+    color: #000;
+    font-family: Arial;
+    font-weight: bold;
+    transition: 0.2s ease-in-out;
+}
+ul li a:hover{
+    color: #f26440;
+    text-decoration: underline;
+}
+/*-----------------------button------------------------*/
+.button-container {
+    display: flex;
+    float: left;
+    justify-content: center;
+    align-items: center;
+    margin-left: 450px;
+    margin-top: 18px;
+}
+  
+.button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: transparent;
+    color: #000;
+    font-size: 16px;
+    font-weight: 400;
+    padding: 10px 20px;
+    text-decoration: none;
+    
+    transition: background-color 0.2s ease-in-out;
+}
+.button:hover{
+    color: #1da1f2;
+}
+.button i {
+    margin-right: 10px;
+    background: transparent;
+}
+.menu_contact{
+    margin-top: 50px;
+    margin-left: 300px;
+    margin-right: 300px;
+    margin-bottom: 50px;
+    background-color: #f9f9f9;
+    box-shadow: 0 0 5px rgba(0,0,0,0.2);
+}
+.icon_insc{
+    padding: 20px;
+    background: transparent;
+    color: #000;
+    font-size: 22px;
+    height: 60px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 30px;
+}
+.icon_insc img{
+    height: 70px;
+    width: auto;
+    padding-right: 12px;
+}
+.form_contact{
+    display: flex;
+    flex-direction: column;
+}
+.form_contact input[type="text"], input[type="email"], input[type="tel"], textarea{
+    font-size: 16px;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-bottom: 15px;
+    width: auto;
+    height: 22px;
+    padding: 5px;
+    border: solid 1px #999;
+    box-shadow: 0 0 5px rgba(0,0,0,0.2);
+}
+.form_contact label{
+    font-size: 16px;
+    background: transparent;
+    margin-left: 23px;
+    margin-bottom: 10px;
+}
+.form_contact input[type="submit"] {
+    text-align: center;
+    width: 120px;
+    height: auto;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 18px 0 28px 310px;
+  }
+.form_contact input[type="submit"]:hover {
+    background-color: rgba(20, 83, 154, 0.8);
+}

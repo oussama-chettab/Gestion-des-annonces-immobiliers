@@ -1,0 +1,164 @@
+*{
+    padding: 0;
+    margin: 0;
+    background-color: rgb(240, 240, 240);
+}
+.navbar{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10px;
+    border-bottom: solid #999 1px;
+}
+.icon{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.icon img{
+    height: 55px;
+}
+ul{
+   display: flex;
+   justify-content: space-between; 
+}
+ul li{
+    list-style: none;
+    padding: 10px;
+    
+}
+ul li a{
+    text-decoration: none;
+    color: #000;
+    transition: 0.2s ease-in-out;
+}
+ul li a:hover{
+    color: #f26440;
+    text-decoration: underline;
+}
+.button-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.button {
+    color: #000;
+    font-size: 16px;
+    font-weight: 400;
+    text-decoration: none;
+    transition: background-color 0.2s ease-in-out;
+}
+.button:hover{
+    color: #1da1f2;
+}
+.button i {
+    background: transparent;
+}
+.button-container button{
+    width: 150px;
+    height: 30px;
+    background-color: #fff;
+    border: solid 1px #f26420;
+    border-radius: 15px;
+    cursor: pointer;
+}
+.button-container button:hover{
+    background-color: #f26420;
+}
+.button-container a{
+    color: #000;
+    background: transparent;
+    text-decoration: none;
+}
+/******************************************************************/
+.agence_info{
+    display: flex;
+    align-items: center;
+    margin: 50px;
+
+}
+.box_agence{
+    height: 570px;
+    width: calc(33% - 10px);
+    padding: 10px;
+    border-radius: 20px;
+    backdrop-filter: blur(100px);
+    box-shadow: 0 0 13px rgba(0, 0, 0, 0.5);
+    background-color: #ddd;
+}
+.box_agence a{
+    text-decoration: none;
+    text-align: center;
+    background: transparent;
+}
+.box_agence img{
+    width: 100%;
+    height: auto;
+    text-align: center;
+    border-radius: 15px;
+}
+.box_agence h4{
+    background: transparent;
+    text-align: center;
+}
+.box_agence i{
+    color: rgba(20, 83, 154, 1);
+    background: transparent;
+    font-size: 13px;
+}
+
+.contacter {
+    width: 400px;
+    margin: 0 auto;
+    padding: 50px 30px;
+    background-color: rgba(20, 83, 154, 1);
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.contacter h2 {
+    font-size: 24px;
+    color: white;
+    margin-bottom: 20px;
+    text-align: center;
+    background: transparent;
+}
+.contacter h2 i{
+    background: transparent;
+}
+.contacter form {
+    display: flex;
+    flex-direction: column;
+    background: transparent;
+}
+
+.contacter label {
+    font-size: 16px;
+    color: white;
+    margin-bottom: 10px;
+    background: transparent;
+}
+
+.contacter input,
+.contacter textarea {
+    font-size: medium;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #999;
+    border-radius: 3px;
+    border: 1px solid #ccc;
+    background: #ddd;
+}
+
+.contacter input[type="submit"] {
+    width: 80%;
+    margin-left: 10%;
+    background-color: #45a049;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.contacter input[type="submit"]:hover {
+    background-color: #318535;
+}

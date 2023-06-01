@@ -1,0 +1,296 @@
+*{
+    padding: 0;
+    margin: 0;
+    background-color: #f1f1f1;
+}
+.navbar{
+    position: relative;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+    width: 100%;
+    height: 75px;
+    border-bottom: solid #999 1px;
+  }
+.icon{
+    width: 200px;
+    float: left;
+    height: 70px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    margin-left: 30px;
+}
+.icon p{
+    margin-left: 10px;
+    font-size: 20px;
+}
+    
+.logo{
+    height: 69px;
+    width: auto;
+    padding: 2px 0;
+    display: flex;
+}
+    
+.menu{
+    width: 400px;
+    float: left;
+    height: 70px;
+    justify-content: space-between;
+    background: transparent;
+}
+.menu ul{
+    float: left;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 170px;
+    background: transparent;
+}
+.menu ul li{
+    list-style: none;
+    margin-left: 50px;
+    margin-top: 27px;
+    font-size: 14px;
+    background: transparent;
+}
+.menu ul li a{
+    text-decoration: none;
+    color: #000;
+    font-family: Arial;
+    font-weight: bold;
+    transition: 0.2s ease-in-out;
+    background: transparent;
+}
+.menu ul li a:hover{
+    color: #f26440;
+    text-decoration: underline;
+}
+.button-container button{
+    width: 150px;
+    height: 30px;
+    border: solid 1px #f26420;
+    border-radius: 15px;
+    cursor: pointer;
+}
+.button-container button:hover{
+    background-color: #f26420;
+    color: #000;
+}
+.button-container a{
+    color: #000;
+    background: transparent;
+    text-decoration: none;
+}
+.button-container a:hover{
+    color: #000;
+}
+    /*-----------------------button------------------------*/
+.button-container {
+    display: flex;
+    float: left;
+    justify-content: center;
+    align-items: center;
+    margin-left: 400px;
+    margin-top: 18px;
+}
+    
+.button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: transparent;
+    color: #000;
+    font-size: 16px;
+    font-weight: 400;
+    padding: 10px 20px;
+    text-decoration: none; 
+    transition: background-color 0.2s ease-in-out;
+}
+.button:hover{
+    color: #1da1f2;
+}
+.button i {
+    margin-right: 3px;
+    background: transparent;
+}
+/*----------------------------------------------------------*/
+.serv{
+    position: fixed;
+    left: 0;
+    width: 200px;
+    height: 100%;
+    background-color: #ddd;
+    color: #1da1f2;
+    padding: 20px;
+    box-sizing: border-box;
+    box-shadow: 5px 0 5px rgba(0, 0, 0, 0.1);
+}
+.serv h2{
+    font-size: 22px;
+    padding-top: 30px;
+    margin-bottom: 30px;
+    background: transparent;
+}
+.serv ul{
+    list-style: none;
+    border-bottom: solid 1px #999;
+    margin-bottom: 20px;
+    background: transparent;
+}
+.serv ul li{
+    padding-bottom: 2px;
+    background: transparent;
+}
+.serv ul li a{
+    display: block;
+    color: #000;
+    text-decoration: none;
+    font-size: 16px;
+    padding: 8px 0;
+    width: 80%;
+}
+.serv ul li a:hover{
+    color: #f26440;
+}
+i{
+    background: transparent;
+}
+.serv_box{
+    display: flex;
+    margin-left: 240px;
+    padding-top: 30px;
+    
+}
+.bvn{
+    margin-left: 240px;
+    padding-top: 40px;
+    font-family: Arial;
+}
+.box_annonce{
+    margin-top: 60px;
+    margin-right: 110px;
+    padding: 10px;
+    text-align: center;
+}
+.box_annonce i{
+    height: 95px;
+    width: 120px;
+    padding-top: 20px;
+    color: #f26440;
+    background-color: #1da1f2;
+    border-radius: 50%;
+    margin-bottom: 20px;
+}
+.box_annonce h2{
+    font-family: 'Times New Roman';
+    margin-bottom: 7px;
+}
+.box_annonce p{
+    font-family: 'Times New Roman';
+    font-size: 15px;
+    margin-bottom: 12px;
+}
+.box_annonce button{
+    font-size: medium;
+    padding: 12px;
+    cursor: pointer;
+    border-radius: 20px;
+    border: solid 1px #1da1f2;
+    color: #000;
+    margin-bottom: 20px;
+}
+.box_annonce button:hover{
+    color: #fff;
+    background-color: #1da1f2;
+}
+
+/*******************************************************************/
+/**************************************//***************************/
+.annonce_valide {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: left;
+    align-items: center;
+    gap: 2em;
+    margin: 50px 0 0 220px;
+    padding: 15px;
+}
+
+.annonce {
+    text-align: center;
+    width: calc(38% - 10px);
+    height: auto;
+    padding: 20px 10px;
+    border-radius: 15px;
+    backdrop-filter: blur(100px);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    background-color: #ddd;
+    margin-bottom: 10px;
+}
+h3{
+    background: transparent;
+}
+a{
+    text-decoration: none;
+    background: transparent;
+    color: rgba(20, 83, 154, 0.9);
+}
+a:hover{
+    color: #f26420;
+}
+.annonce .inf {
+    text-align: left;
+    padding: 7px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    background: transparent;
+}
+
+.annonce h4 {
+    margin: 0;
+    font-size: 16px;
+    background: transparent;
+}
+
+.annonce h4 i {
+    margin-right: 5px;
+    background: transparent;
+}
+
+.annonce h4:first-child {
+    color: rgba(20, 83, 154, 0.9);
+}
+.img_A{
+    height: 300px;
+    width: 100%;
+    border-radius: 2px;
+    background: transparent;
+} 
+/************************************************************/
+.supp{
+    display: flex;
+    justify-content: space-evenly;
+    text-align: center;
+    align-items: center;
+    background: transparent;
+}
+.btn_supprimer{
+    color: #000;
+    cursor: pointer;
+    padding: 10px;
+    border: none;
+    border-radius: 50%;
+    background: transparent;
+} 
+
+.btn_supprimer i{
+    background: transparent;
+}
+.btn_supprimer i:hover{
+    color: rgb(246, 64, 64);
+}
+form{
+    background: transparent;
+}

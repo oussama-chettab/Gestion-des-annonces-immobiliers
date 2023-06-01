@@ -1,0 +1,203 @@
+*{
+    padding: 0;
+    margin: 0;
+    background-color: rgb(240, 240, 240);
+}
+.navbar{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10px;
+    border-bottom: solid #999 1px;
+}
+.icon{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+ul{
+   display: flex;
+   justify-content: space-between; 
+}
+ul li{
+    list-style: none;
+    padding: 10px;
+    
+}
+ul li a{
+    text-decoration: none;
+    color: #000;
+    transition: 0.2s ease-in-out;
+}
+ul li a:hover{
+    color: #f26440;
+    text-decoration: underline;
+}
+.button-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.button {
+    color: #000;
+    font-size: 16px;
+    font-weight: 400;
+    text-decoration: none;
+    transition: background-color 0.2s ease-in-out;
+}
+.button:hover{
+    color: #1da1f2;
+}
+.button i {
+    background: transparent;
+}
+.button-container button{
+    width: 150px;
+    height: 30px;
+    background-color: #fff;
+    border: solid 1px #f26420;
+    border-radius: 15px;
+    cursor: pointer;
+}
+.button-container button:hover{
+    background-color: #f26420;
+}
+.button-container a{
+    color: #000;
+    background: transparent;
+    text-decoration: none;
+}
+/***************************************************************/
+.bar_cherche{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 50px;
+    padding: 18px;
+    background-color: rgba(20, 83, 154, 1);
+}
+form{
+    height: 40px;
+    width: 95%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    background: transparent;
+}
+input, select{
+    padding: 8px;
+    width: 300px;
+    border: solid rgb(240, 240, 240) 1px;
+    border-radius: 8px;
+}
+.btn{
+    width: 90px;
+    padding: 6px;
+    border: solid #ddd;
+    border-radius: 5px;
+    cursor: pointer;
+    color: #000;
+    background-color: #ddd;
+}
+.btn i{
+    background: transparent;
+}
+img{
+    height: 50px;
+    background: transparent;
+}
+/******************************************************/
+.img_txt{
+    padding: 0;
+    position: relative;
+    height: 210px;
+    width: 100%;  
+    margin-bottom: 200px;
+}
+.img_txt img{
+    vertical-align: middle;
+    height: 350px;
+    width: 100%;
+}
+.img_txt .text {
+    top: 50%;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    font-size: 3rem;
+    font-weight: bold;
+    color: #f26440;
+    background: transparent;
+    text-align: center;
+    transform: translateY(100%);
+    animation: slide-up 1s ease-in-out forwards;
+    position: absolute;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+  
+@keyframes slide-up {
+0% {
+    transform: translateY(100%);
+}
+100% {
+    transform: translateY(0);
+}
+}
+/***************************************************/
+h2{
+    text-align: center;
+    align-items: center;
+}
+h3{
+    background: transparent;
+    text-align: center;
+    color: rgba(20, 83, 154, 1);
+}
+.agences{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 5em;
+    margin: 50px;
+    padding: 15px;
+}
+.box_agence{
+    height: 570px;
+    width: calc(33% - 10px);
+    padding: 10px;
+    border-radius: 20px;
+    backdrop-filter: blur(100px);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    background-color: #ddd;
+}
+.box_agence a{
+    text-decoration: none;
+    text-align: center;
+    background: transparent;
+}
+.box_agence img{
+    width: 60px;
+    height: 70px;
+    text-align: center;
+    border-radius: 15px;
+}
+h4{
+    background: transparent;
+    text-align: center;
+}
+.box_agence i{
+    color: rgba(20, 83, 154, 1);
+    background: transparent;
+    font-size: 13px;
+}
+.agence_info{
+    display: flex;
+    justify-content: space-between;
+    margin: 50px;
+
+}
+.contacter{
+    display: grid;
+}
