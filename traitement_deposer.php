@@ -28,7 +28,7 @@ if (isset($_POST['submit'])) {
     }
     $titre = stripcslashes(strtolower($_POST['titre']));
     $adresse = $_POST['adresse'];
-    $description = $_POST['description'];
+    $description = mysqli_real_escape_string($conn, $_POST['description']);
     $prix = stripcslashes(strtolower($_POST['prix']));
     $valide = 0;
     $Id_U = $_SESSION['Id_U'];
@@ -69,14 +69,16 @@ if (isset($_POST['submit'])) {
 if(!isset($err_s)){
     if($num_rows == 0){
         $photo = $_FILES['photo']['name'];
+        $photo_tmp_name = $_FILES['photo']['tmp_name'];
         $photo_size = $_FILES['photo']['size'];
         $photo_error = $_FILES['photo']['error'];
+        
         $file = explode('.',$photo);
         $file_accept = strtolower(end($file));
         $allowed = array('png','jpg','svg','jpeg');
     
         if((in_array($file_accept,$allowed)) && ( $photo_size < 4000000 )){ 
-            $photo_tmp_name = $_FILES['photo']['tmp_name'];
+            
             $photo_data = file_get_contents($photo_tmp_name);
             $photo_base64 = base64_encode($photo_data);
             $target_directory = 'annonce_images/';
@@ -85,13 +87,13 @@ if(!isset($err_s)){
             $sql = "INSERT INTO annonce (type_annonce, type_bien, titre, adresse, description, prix, ville, photo, chambres, etage, surface, Meublé, Electroménager, Jardin, Piscine, Garage, Parking, Espase_exterieure, valide, id_U)
             VALUES ('$type_annonce','$type_bien', '$titre', '$adresse', '$description','$prix', '$ville', '$target_path','$chambre','$etage','$surface','$meuble','$electromenager','$jardin','$piscine','$garage', '$parking', '$espace_exterieur', $valide, '$Id_U')";
             $result = mysqli_query($conn,$sql);
-        if(!empty($photo)){  
+        if(!empty($photo)){
             if(move_uploaded_file($photo_tmp_name,$target_path)){    
                 
                 $mail = new PHPMailer(true);
-                $sql_email = "SELECT email FROM utilisateur WHERE email !='contaoussama17@gmail.com' ";
+                $sql_email = "SELECT email FROM utilisateur ";
                 $result_email = mysqli_query($conn,$sql_email);
-                while ($row = mysqli_fetch_assoc($result_email)) {
+                if ($row = mysqli_fetch_assoc($result_email)) {
                     $email = $row['email'];
                     
                     try {
@@ -106,8 +108,8 @@ if(!isset($err_s)){
                         //Recipients
                         $mail->setFrom('from@example.com', 'BaytiShop');
                         $mail->addAddress($email);     //Add a recipient
-                        $message = "A new announcement has been posted: $titre in wilaya of $ville. Check it out on our website!";
-                        $subject = "New Announcement";
+                        $message = "A new announcement has been posted: $titre in wilaya of $ville. Check it out on our website!\n Lien: http://localhost/projet1/annonce.php";
+                        $subject = "New Announcement in BaytiShop";
                     
                         //Content
                         $mail->isHTML(true);                //Set email format to HTML
@@ -129,8 +131,7 @@ if(!isset($err_s)){
                         ';
                     }
                 }
-
-                if( mysqli_query($conn,$sql)){
+                if( mysqli_query($conn,$sql)){  
                     header('location:Mes_annonce.php');    
                     exit();
                 }else{

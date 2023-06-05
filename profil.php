@@ -47,6 +47,9 @@
             <li><a href="FAVORIS.php"><i class="fa-solid fa-star"></i> Favoris</a></li>
             <li><a href="#"><i class="fa-regular fa-bell"></i> Alerts e-mail</a></li>
             <li><a href="Edit_user.php"><i class="fa-regular fa-user"></i> Profil (Modifier)</a></li>
+            <?php if($email =='contaoussama17@gmail.com'){
+                echo '<li><a href="http://localhost/phpmyadmin/index.php?route=/database/structure&server=1&db=projet"><i class="fa-solid fa-gear"></i> Gestion de BD</a></li>';
+            } ?>
             <li><a href="deconnecter.php"><i class="fas fa-sign-in-alt"></i> Déconnecté</a></li>
         </ul>
     </div>

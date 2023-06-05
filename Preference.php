@@ -32,8 +32,7 @@
                     $email = $_SESSION['email'];
                     $info = mysqli_query($conn, "SELECT * FROM utilisateur ");
                     $row = mysqli_fetch_array($info);
-                    echo '<a href="profil.php" class="button"><i class="fa-regular fa-user"></i>'.$row["Nom"].'</a>';
-                    
+                    echo '<a href="profil.php" class="button"><i class="fa-regular fa-user"></i>'.$row["Nom"].'</a>';    
                 }else{
                     echo '<a href="connexion.php" class="button"><i class="fas fa-sign-in-alt"></i>Connexion / Inscription</a>';  
                 }

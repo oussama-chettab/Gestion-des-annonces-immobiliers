@@ -19,7 +19,7 @@
         <div class="menu">
             <ul>
                 <li><a href="annonce.php">Annonces</a></li>
-                <li><a href="Location.php">Locataire</a></li>
+                <li><a href="Location.php">Preference</a></li>
                 <li><a href="agences.php">Agences</a></li>
                 <li><a href="Statistiques.php">Statistique</a></li>
                 <li><a href="contact.php">Contact</a></li>
@@ -61,6 +61,7 @@
                 $etage = $row['etage'];
                 $prix = $row['prix'];
                 $Id_U = $row['id_U'];
+                
                 
     ?>
                 

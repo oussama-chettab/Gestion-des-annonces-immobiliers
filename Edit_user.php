@@ -29,7 +29,13 @@
             height: 70px;
         }
         input[type="text"],
-        input[type="tel"],
+        input[type="tel"]{
+            width: 328px;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: solid 1px #fff;
+            border-radius: 7px;
+        }
         input[type="password"]{
             width: 300px;
             padding: 10px;
@@ -46,9 +52,23 @@
             border-radius: 7px;
             cursor: pointer;
         }
+        .show-password {
+            top: 10px;
+            cursor: pointer;
+            margin-top: 2px;
+            margin-bottom: 5px;
+        }
+        .show-password i {
+            color: #333;
+        }
+        
+        .show-password i:hover {
+            color: #ccc;
+        }
     </style>
 </head>
 <body>
+    
     <form action="Edit.php" method="POST">
         <div class="icon_insc">
            <img src="images/logo_white_large.png" alt="icon"> 
@@ -57,8 +77,13 @@
         <input type="text" id="nom" name="nom" placeholder=" Nom"><br>
         <input type="text" id="prenom" name="prenom" placeholder=" Prenom"><br>
         <input type="tel" id="tel" name="tel" placeholder=" Tel (+213)000 000 000" ><br>
-        <input type="password" id="motdepasse" name="motdepasse" placeholder=" Mot de passe"><br>
-        <input type="submit" value="modifier"><br>
+        <div class="show">
+            <input type="password" id="password" name="password" placeholder=" Mot de passe">
+            <span class="show-password" onclick="Show()"><i class="fa fa-eye" aria-hidden="true"></i></span><br>
+        </div><br>
+        <input type="submit" value="modifier">
     </form>
+    
+    <script src="js/connexion.js"></script>
 </body>
 </html>

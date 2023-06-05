@@ -47,18 +47,21 @@
     <?php 
     
         $infos = mysqli_query($conn, " SELECT * FROM annonce ");
-        while($dt = mysqli_fetch_array($infos)){
-            if($valide = 1){
+        while($dt = mysqli_fetch_array($infos)){          
                 $valide = $dt['valide'];
-                $photo = $dt['photo'];
+                $photo_data = $dt['photo'];
+                $photo_base64 = base64_encode($photo_data);
+                
                 $annonceId = $dt['id_A'];
                 $url = 'Annonce_info.php?id_A=' . $annonceId;
                 $_SESSION['id_A'] = $dt['id_A'];
+            if($valide == 1){   
+                
     ?>
         
         <div class="annonce">
         <h3><a href="<?php echo $url; ?>"> <?php echo $dt['type_annonce'].' '.$dt['type_bien'] ;?></a></h3><br>
-        <img src="data:image/jpeg;base64,<?php echo base64_encode($photo); ?>" alt="Image" class="img_A">
+        <img src="data:image/jpeg;base64,<?php echo $photo_base64; ?>" alt="Image" class="img_A">
             <div class="inf">
                 <h4 style="color: rgba(20, 83, 154, 0.9);"><i class="fa-solid fa-location-dot"></i> <?php echo $dt['ville'] ;?></h4><br>
                 <h4><i class="fa-solid fa-tag"></i> <?php echo $dt['titre'] ;?></h4><br>
@@ -68,7 +71,8 @@
         </div>        
     
     <?php 
-        }}
+            }
+        }
         $conn->close();
     ?>
     </div>

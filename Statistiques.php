@@ -1,4 +1,5 @@
 <?php 
+    session_start();
     include('config.php');
 ?>
 <!DOCTYPE html>
@@ -28,9 +29,16 @@
             </ul>
         </div>
         <div class="button-container">
-            <a href="profil.php" class="button login-button">
-              <i class="fas fa-sign-in-alt"></i> Connexion / Inscription
-            </a>
+            <?php
+                if(isset($_SESSION['email'])){
+                    $email = $_SESSION['email'];
+                    $info = mysqli_query($conn, "SELECT * FROM utilisateur ");
+                    $row = mysqli_fetch_array($info);
+                    echo '<a href="profil.php" class="button"><i class="fa-regular fa-user"></i> '.$row["Nom"].'</a>';    
+                }else{
+                    echo '<a href="connexion.php" class="button"><i class="fas fa-sign-in-alt"></i>Connexion / Inscription</a>';  
+                }
+            ?>
         </div>   
     </div>
 

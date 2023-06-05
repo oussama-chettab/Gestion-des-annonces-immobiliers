@@ -61,7 +61,9 @@
       
             <label for="message">Message:</label>
             <textarea id="message" name="message" required></textarea>
-      
+            
+            <input type="hidden" name="recipient" value="contaoussama17@gmail.com">
+            
             <input type="submit" name="envoyer" value="Envoyer">
         </form>
     </div>
