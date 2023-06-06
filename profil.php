@@ -45,7 +45,7 @@
         <ul>
             <li><a href="Mes_annonce.php"><i class="fa-solid fa-pen"></i> Mes annonces</a></li>
             <li><a href="FAVORIS.php"><i class="fa-solid fa-star"></i> Favoris</a></li>
-            <li><a href="#"><i class="fa-regular fa-bell"></i> Alerts e-mail</a></li>
+            <li><a href="https://mail.google.com/"><i class="fa-regular fa-bell"></i> Alerts e-mail</a></li>
             <li><a href="Edit_user.php"><i class="fa-regular fa-user"></i> Profil (Modifier)</a></li>
             <?php if($email =='contaoussama17@gmail.com'){
                 echo '<li><a href="http://localhost/phpmyadmin/index.php?route=/database/structure&server=1&db=projet"><i class="fa-solid fa-gear"></i> Gestion de BD</a></li>';
@@ -72,7 +72,7 @@
             <i class="fa-regular fa-bell fa-4x"></i>
             <h2>Alerts e-mail</h2>
             <p>Gérer vos alertes e-mails</p>
-            <a href=".php"><button>Alerts e-mail</button></a>
+            <a href="https://mail.google.com/"><button>Alerts e-mail</button></a>
         </div>
     </div>
 </body>
